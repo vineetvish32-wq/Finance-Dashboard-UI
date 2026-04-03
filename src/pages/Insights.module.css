@@ -1,0 +1,131 @@
+.page { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+.header { margin-bottom: 24px; }
+.title  { font-size: 22px; font-weight: 600; color: var(--text); }
+.sub    { font-size: 13px; color: var(--text2); margin-top: 4px; }
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.insightCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.insightLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+
+.insightValue {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+.insightDesc {
+  font-size: 12px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+.progressBar {
+  height: 5px;
+  border-radius: 3px;
+  background: var(--bg4);
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+/* Breakdown */
+.breakdownCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.catRows { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
+
+.catRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.catLabel {
+  font-size: 12px;
+  color: var(--text2);
+  min-width: 110px;
+  white-space: nowrap;
+}
+
+.barTrack {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg4);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.catVal {
+  font-size: 12px;
+  color: var(--text);
+  font-family: var(--mono);
+  min-width: 80px;
+  text-align: right;
+}
+
+.catPct {
+  font-size: 11px;
+  color: var(--text3);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* Charts */
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.chartCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.chartTitle { font-size: 14px; font-weight: 500; color: var(--text); }
+.chartSub   { font-size: 12px; color: var(--text2); margin-top: 3px; margin-bottom: 14px; }
+.chartWrap  { position: relative; width: 100%; height: 240px; }
+
+@media (max-width: 900px) {
+  .chartsGrid { grid-template-columns: 1fr; }
+}
